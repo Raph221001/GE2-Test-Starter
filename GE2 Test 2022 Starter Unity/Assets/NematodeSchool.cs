@@ -14,7 +14,6 @@ public class NematodeSchool : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        // Create nematodes randomly
         for (int i = 0; i < count; i++)
         {
             GameObject nematode = Instantiate(prefab);
@@ -22,7 +21,6 @@ public class NematodeSchool : MonoBehaviour
             nematode.transform.localPosition = new Vector3(Random.Range(-radius, radius), Random.Range(-radius, radius), Random.Range(-radius, radius));
         }
 
-        //Set the nematodes to have random rotations around the y axis
         for (int i = 0; i < count; i++)
         {
             Transform current = transform.GetChild(i);
